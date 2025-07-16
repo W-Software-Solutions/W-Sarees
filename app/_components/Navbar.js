@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
 
@@ -16,11 +17,11 @@ const Navbar = () => {
       </div>
       {/* Desktop Links */}
       <div className="space-x-8 hidden md:flex">
-        <a href="/" className="text-[#333333] hover:text-[#800020] font-medium transition">Home</a>
-        <a href="/about" className="text-[#333333] hover:text-[#800020] font-medium transition">About</a>
-        <a href="#process" className="text-[#333333] hover:text-[#800020] font-medium transition">Process</a>
-        <a href="#gallery" className="text-[#333333] hover:text-[#800020] font-medium transition">Gallery</a>
-        <a href="/contact" className="text-[#333333] hover:text-[#800020] font-medium transition">Contact</a>
+        <Link href="/" className="text-[#333333] hover:text-[#800020] font-medium transition">Home</Link>
+        <Link href="/about" className="text-[#333333] hover:text-[#800020] font-medium transition">About</Link>
+        <Link href="#process" className="text-[#333333] hover:text-[#800020] font-medium transition">Process</Link>
+        <Link href="#gallery" className="text-[#333333] hover:text-[#800020] font-medium transition">Gallery</Link>
+        <Link href="/contact" className="text-[#333333] hover:text-[#800020] font-medium transition">Contact</Link>
       </div>
       {/* Desktop WhatsApp Button */}
       <a
@@ -51,11 +52,11 @@ const Navbar = () => {
             >
               <FaTimes size={28} />
             </button>
-            <a href="/" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Home</a>
-            <a href="/about" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>About</a>
-            <a href="#process" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Process</a>
-            <a href="#gallery" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Gallery</a>
-            <a href="/contact" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Contact</a>
+            <Link href="/" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Home</Link>
+            <Link href="/about" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>About</Link>
+            <Link href="#process" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Process</Link>
+            <Link href="#gallery" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Gallery</Link>
+            <Link href="/contact" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Contact</Link>
             <a
               href={whatsappUrl}
               target="_blank"

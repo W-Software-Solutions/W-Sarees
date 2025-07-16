@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaWhatsapp, FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
@@ -7,9 +8,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand & Address */}
         <div>
-        <div className="flex items-center gap-2 mb-2">
-        <Image src="/W-logo.jpg" alt="W Sarees Logo" width={40} height={40} className="rounded-full" />
-          <h2 className="text-center items-center font-playfair text-2xl font-bold text-[#a52a2a]">W Sarees</h2>
+          <div className="flex items-center gap-2 mb-2">
+            <Image src="/W-logo.jpg" alt="W Sarees Logo" width={40} height={40} className="rounded-full" />
+            <h2 className="text-center items-center font-playfair text-2xl font-bold text-[#a52a2a]">W Sarees</h2>
           </div>
           <p className="text-sm mb-2">W Sarees & Textile Manufacturing </p>
           <p className="text-xs">
@@ -28,10 +29,18 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-2">Quick Links</h3>
           <ul className="space-y-1 text-sm">
-            <li><a href="/" className="hover:text-[#a52a2a]">Home</a></li>
-            <li><a href="/products" className="hover:text-[#a52a2a]">Products</a></li>
-            <li><a href="/about" className="hover:text-[#a52a2a]">About Us</a></li>
-            <li><a href="/contact" className="hover:text-[#a52a2a]">Contact</a></li>
+            <li>
+              <Link href="/" className="hover:text-[#a52a2a]">Home</Link>
+            </li>
+            <li>
+              <Link href="/products" className="hover:text-[#a52a2a]">Products</Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-[#a52a2a]">About Us</Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-[#a52a2a]">Contact</Link>
+            </li>
           </ul>
         </div>
         {/* Social & Markets */}
