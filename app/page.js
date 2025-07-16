@@ -52,7 +52,6 @@ export default function Home() {
             Partner With Us
           </a>
         </div>
-        // ...existing code...
         <div className="flex-1 flex justify-center relative">
           <div className="relative w-[500px] h-[600px]">
             <Image
