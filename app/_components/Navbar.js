@@ -15,7 +15,7 @@ const Navbar = () => {
         <Image src="/W-logo.jpg" alt="W Sarees Logo" width={40} height={40} className="rounded-full" />
         <span className="text-2xl font-bold text-[#800020]">W Sarees</span>
       </div>
-      {/* Desktop Links */}
+    
       <div className="space-x-8 hidden md:flex">
         <Link href="/" className="text-[#333333] hover:text-[#800020] font-medium transition">Home</Link>
         <Link href="/about" className="text-[#333333] hover:text-[#800020] font-medium transition">About</Link>
@@ -23,7 +23,7 @@ const Navbar = () => {
         <Link href="#gallery" className="text-[#333333] hover:text-[#800020] font-medium transition">Gallery</Link>
         <Link href="/contact" className="text-[#333333] hover:text-[#800020] font-medium transition">Contact</Link>
       </div>
-      {/* Desktop WhatsApp Button */}
+
       <a
         href={whatsappUrl}
         target="_blank"
@@ -33,7 +33,7 @@ const Navbar = () => {
         <FaWhatsapp size={18} />
         Enquiry
       </a>
-      {/* Hamburger Icon */}
+
       <button
         className="md:hidden text-[#800020] focus:outline-none"
         onClick={() => setMenuOpen(true)}
@@ -41,7 +41,7 @@ const Navbar = () => {
       >
         <FaBars size={28} />
       </button>
-      {/* Mobile Menu */}
+  
       {menuOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex justify-end">
           <div className="bg-white w-64 h-full shadow-lg flex flex-col p-6 animate-slide-in">
