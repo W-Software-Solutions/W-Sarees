@@ -1,0 +1,84 @@
+'use client';
+import Image from "next/image";
+import { useState } from "react";
+import { FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
+
+const whatsappUrl = "https://wa.me/919876543210?text=Hello,%20I%20want%20to%20enquire%20about%20sarees.";
+
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <nav className="w-full bg-white shadow flex items-center justify-between px-4 md:px-8 py-4 sticky top-0 z-50">
+      <div className="flex items-center gap-2">
+        <Image src="/W-logo.jpg" alt="W Sarees Logo" width={40} height={40} className="rounded-full" />
+        <span className="text-2xl font-bold text-[#800020]">W Sarees</span>
+      </div>
+      {/* Desktop Links */}
+      <div className="space-x-8 hidden md:flex">
+        <a href="/" className="text-[#333333] hover:text-[#800020] font-medium transition">Home</a>
+        <a href="/about" className="text-[#333333] hover:text-[#800020] font-medium transition">About</a>
+        <a href="#process" className="text-[#333333] hover:text-[#800020] font-medium transition">Process</a>
+        <a href="#gallery" className="text-[#333333] hover:text-[#800020] font-medium transition">Gallery</a>
+        <a href="/contact" className="text-[#333333] hover:text-[#800020] font-medium transition">Contact</a>
+      </div>
+      {/* Desktop WhatsApp Button */}
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener"
+        className="hidden md:inline-flex bg-[#25D366] text-white px-5 py-2 rounded-full font-semibold shadow hover:bg-[#128C7E] transition items-center gap-2"
+      >
+        <FaWhatsapp size={18} />
+        Enquiry
+      </a>
+      {/* Hamburger Icon */}
+      <button
+        className="md:hidden text-[#800020] focus:outline-none"
+        onClick={() => setMenuOpen(true)}
+        aria-label="Open menu"
+      >
+        <FaBars size={28} />
+      </button>
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex justify-end">
+          <div className="bg-white w-64 h-full shadow-lg flex flex-col p-6 animate-slide-in">
+            <button
+              className="self-end mb-6 text-[#800020]"
+              onClick={() => setMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <FaTimes size={28} />
+            </button>
+            <a href="/" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Home</a>
+            <a href="/about" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>About</a>
+            <a href="#process" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Process</a>
+            <a href="#gallery" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Gallery</a>
+            <a href="/contact" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Contact</a>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener"
+              className="mt-6 inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-full font-semibold shadow hover:bg-[#128C7E] transition"
+            >
+              <FaWhatsapp size={20} />
+              Enquire on WhatsApp
+            </a>
+          </div>
+        </div>
+      )}
+      <style jsx global>{`
+        @keyframes slide-in {
+          from { transform: translateX(100%); }
+          to { transform: translateX(0); }
+        }
+        .animate-slide-in {
+          animation: slide-in 0.3s ease;
+        }
+      `}</style>
+    </nav>
+  )
+}
+
+export default Navbar
