@@ -35,34 +35,34 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#FFF8E7] flex flex-col">
-      
 
-      <section className="w-full flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto py-16 px-4 gap-10">
-        <div className="flex-1 text-center md:text-left">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-[#800020] mb-6 leading-tight drop-shadow-lg">
-             Saree Manufacturing Unit
+      
+      <section className="w-full flex flex-col-reverse md:flex-row items-center justify-between max-w-7xl mx-auto py-10 md:py-16 px-4 md:px-8 gap-8 md:gap-10">
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#800020] mb-6 leading-tight drop-shadow-lg">
+            Saree Manufacturing Unit
           </h1>
-          <p className="text-xl text-[#333333] mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-[#333333] mb-8">
             Delivering excellence in textile manufacturing for over 25 years. Trusted by global brands, boutiques, and retailers.
           </p>
           <a
-            href="#enquiry"
-            className="inline-block bg-[#800020] text-[#F5DEB3] px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-[#a8324a] transition"
+            href="/partner-up"
+            className="inline-block bg-[#800020] text-[#F5DEB3] px-6 py-3 sm:px-8 sm:py-3 rounded-full font-semibold shadow-lg hover:bg-[#a8324a] transition w-full sm:w-auto"
           >
             Partner With Us
           </a>
         </div>
-        <div className="flex-1 flex justify-center relative">
-          <div className="relative w-[500px] h-[600px]">
+        <div className="w-full md:w-1/2 flex justify-center relative mb-8 md:mb-0">
+          <div className="relative w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl aspect-[5/6]">
             <Image
               src={heroImages[current]}
               alt="Elegant Saree"
               fill
               className="rounded-2xl shadow-2xl object-cover transition-all duration-700"
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
-
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
             {heroImages.map((_, idx) => (
               <span
@@ -74,36 +74,9 @@ export default function Home() {
         </div>
       </section>
 
-      
-
-
-      <section id="process" className="w-full bg-[#F5DEB3] py-16 px-4">
-        <h2 className="text-3xl font-bold text-[#800020] text-center mb-10">Our Manufacturing Process</h2>
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
-            <span className="text-3xl font-bold text-[#800020] mb-2">1</span>
-            <p className="text-[#333333] text-center">Sourcing Premium Fabrics</p>
-          </div>
-          <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
-            <span className="text-3xl font-bold text-[#800020] mb-2">2</span>
-            <p className="text-[#333333] text-center">Design & Pattern Creation</p>
-          </div>
-          <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
-            <span className="text-3xl font-bold text-[#800020] mb-2">3</span>
-            <p className="text-[#333333] text-center">Precision Manufacturing</p>
-          </div>
-          <div className="bg-white rounded-xl shadow p-6 flex flex-col items-center">
-            <span className="text-3xl font-bold text-[#800020] mb-2">4</span>
-            <p className="text-[#333333] text-center">Quality Control & Packaging</p>
-          </div>
-        </div>
-      </section>
-
-
-
-      <section id="gallery" className="w-full bg-[#F5DEB3] py-16 px-4">
-        <h2 className="text-3xl font-bold text-[#800020] text-center mb-10">Factory & Product Gallery</h2>
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+      <section id="gallery" className="w-full bg-[#F5DEB3] py-10 md:py-16 px-4 md:px-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#800020] text-center mb-8 md:mb-10">Factory & Product Gallery</h2>
+        <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
           {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
             <div key={item} className="rounded-xl overflow-hidden shadow-lg bg-white">
               <Image
@@ -111,14 +84,16 @@ export default function Home() {
                 alt={`Gallery ${item}`}
                 width={300}
                 height={200}
-                className="object-cover w-full h-40"
+                className="object-cover w-full h-32 sm:h-40 md:h-48"
+                sizes="(max-width: 768px) 50vw, 25vw"
               />
             </div>
           ))}
         </div>
       </section>
 
-    
+
+
       <section id="products" className="w-full max-w-7xl mx-auto py-16 px-4">
         <h2 className="text-3xl font-bold text-[#800020] text-center mb-10">Featured Sarees</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
@@ -149,7 +124,7 @@ export default function Home() {
         </div>
       </section>
 
-      
+
     </main>
   );
 }

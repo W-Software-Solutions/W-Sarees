@@ -2,7 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
+import { FaBars, FaWhatsapp } from "react-icons/fa";
+import { IoArrowForwardCircle } from "react-icons/io5";
 
 const whatsappUrl = "https://wa.me/919876543210?text=Hello,%20I%20want%20to%20enquire%20about%20sarees.";
 
@@ -15,13 +16,13 @@ const Navbar = () => {
         <Image src="/W-logo.jpg" alt="W Sarees Logo" width={40} height={40} className="rounded-full" />
         <span className="text-2xl font-bold text-[#800020]">W Sarees</span>
       </div>
-    
+
       <div className="space-x-8 hidden md:flex">
-        <Link href="/" className="text-[#333333] hover:text-[#800020] font-medium transition">Home</Link>
-        <Link href="/about" className="text-[#333333] hover:text-[#800020] font-medium transition">About</Link>
-        <Link href="#process" className="text-[#333333] hover:text-[#800020] font-medium transition">Process</Link>
-        <Link href="#gallery" className="text-[#333333] hover:text-[#800020] font-medium transition">Gallery</Link>
-        <Link href="/contact" className="text-[#333333] hover:text-[#800020] font-medium transition">Contact</Link>
+        <Link href="/" className="text-[#333333] hover:text-[#800020] font-bold transition">Home</Link>
+        <Link href="/about" className="text-[#333333] hover:text-[#800020] font-bold transition">About</Link>
+        <Link href="/#process" className="text-[#333333] hover:text-[#800020] font-bold transition">Process</Link>
+        <Link href="/#gallery" className="text-[#333333] hover:text-[#800020] font-bold transition">Gallery</Link>
+        <Link href="/contact" className="text-[#333333] hover:text-[#800020] font-bold transition">Contact</Link>
       </div>
 
       <a
@@ -41,17 +42,19 @@ const Navbar = () => {
       >
         <FaBars size={28} />
       </button>
-  
+
       {menuOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex justify-end">
-          <div className="bg-white w-64 h-full shadow-lg flex flex-col p-6 animate-slide-in">
-            <button
-              className="self-end mb-6 text-[#800020]"
-              onClick={() => setMenuOpen(false)}
-              aria-label="Close menu"
-            >
-              <FaTimes size={28} />
-            </button>
+          <div className="bg-white w-64 h-full shadow-lg flex flex-col p-6 animate-slide-in relative">
+            <div className="flex justify-center items-center mb-8">
+              <button
+                className="text-[#800020] p-3 rounded-full bg-[#f8e7d1] shadow focus:outline-none"
+                onClick={() => setMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                <IoArrowForwardCircle size={32} />
+              </button>
+            </div>
             <Link href="/" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Home</Link>
             <Link href="/about" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>About</Link>
             <Link href="#process" className="mb-4 text-lg font-medium text-[#333333] hover:text-[#800020] transition" onClick={() => setMenuOpen(false)}>Process</Link>
