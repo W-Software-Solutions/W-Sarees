@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200">
-      
+
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Pattern */}
@@ -47,14 +47,14 @@ export default function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            
+
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className="inline-block px-4 py-2 bg-red-900/10 rounded-full border border-red-900/20">
                   <span className="text-red-900 font-medium text-sm">Premium Textile Manufacturing</span>
                 </div>
-                
+
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-red-900 leading-tight">
                   Exquisite
                   <span className="block text-red-800">
@@ -64,7 +64,7 @@ export default function Home() {
                     Since 1998
                   </span>
                 </h1>
-                
+
                 <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg">
                   Crafting timeless elegance with modern precision. Trusted by global brands, boutiques, and discerning customers worldwide.
                 </p>
@@ -80,7 +80,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </a>
-                
+
                 <a
                   href="#gallery"
                   className="inline-flex items-center px-8 py-4 border-2 border-red-900 text-red-900 rounded-full font-semibold hover:bg-red-900 hover:text-white transition-all duration-300"
@@ -109,7 +109,7 @@ export default function Home() {
             {/* Right Content - Images & Video */}
             <div className="relative">
               <div className="grid grid-cols-2 gap-6 h-full">
-                
+
                 {/* Video Section */}
                 <div className="space-y-6">
                   <div className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl bg-red-900 p-1">
@@ -124,7 +124,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  
+
                   {/* Small feature card */}
                   <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-white/50">
                     <div className="text-red-900 font-bold text-lg">Premium Quality</div>
@@ -182,18 +182,17 @@ export default function Home() {
                           <button
                             key={idx}
                             onClick={() => setCurrent(idx)}
-                            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                              current === idx 
-                                ? "bg-white w-8" 
+                            className={`w-2 h-2 rounded-full transition-all duration-300 ${current === idx
+                                ? "bg-white w-8"
                                 : "bg-white/50 hover:bg-white/75"
-                            }`}
+                              }`}
                             aria-label={`Go to slide ${idx + 1}`}
                           />
                         ))}
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Small feature card */}
                   <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-white/50">
                     <div className="text-red-900 font-bold text-lg">Custom Design</div>
@@ -210,10 +209,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ENHANCED GALLERY SECTION */}
+
+
+
+      {/* PROFESSIONAL GALLERY SECTION */}
       <section id="gallery" className="relative py-20 bg-gradient-to-br from-yellow-100 to-yellow-200">
         <div className="max-w-7xl mx-auto px-4">
-          
+
           {/* Section Header */}
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-red-900/10 rounded-full border border-red-900/20 mb-4">
@@ -227,26 +229,177 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Simple, Clean Gallery Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+            {/* Main Featured Image */}
+            <div className="col-span-2 row-span-2 group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="relative aspect-square bg-red-900 p-1 rounded-2xl">
+                <div className="relative w-full h-full rounded-xl overflow-hidden">
+                  <img
+                    src="/gallery1.jpeg"
+                    alt="Gallery 1"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
+                      <svg className="w-6 h-6 text-red-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Gallery Item 2 */}
+            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="relative aspect-square bg-red-900 p-1 rounded-2xl">
+                <div className="relative w-full h-full rounded-xl overflow-hidden">
+                  <img
+                    src="/gallery2.jpeg"
+                    alt="Gallery 2"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
+                      <svg className="w-6 h-6 text-red-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Gallery Item 3 */}
+            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="relative aspect-square bg-red-900 p-1 rounded-2xl">
+                <div className="relative w-full h-full rounded-xl overflow-hidden">
+                  <img
+                    src="/gallery3.jpeg"
+                    alt="Gallery 3"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
+                      <svg className="w-6 h-6 text-red-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Gallery Item 4 */}
+            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="relative aspect-square bg-red-900 p-1 rounded-2xl">
+                <div className="relative w-full h-full rounded-xl overflow-hidden">
+                  <img
+                    src="/gallery4.jpeg"
+                    alt="Gallery 4"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
+                      <svg className="w-6 h-6 text-red-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Gallery Item 5 */}
+            <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="relative aspect-square bg-red-900 p-1 rounded-2xl">
+                <div className="relative w-full h-full rounded-xl overflow-hidden">
+                  <img
+                    src="/gallery5.jpeg"
+                    alt="Gallery 5"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
+                      <svg className="w-6 h-6 text-red-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-span-2 md:col-span-4 flex justify-center mt-8">
+              <a
+                href="/gallery"
+                className="inline-flex items-center px-8 py-4 bg-red-900 hover:bg-red-800 text-white rounded-full font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg"
+              >
+                See Gallery
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+
+          </div>
+          </div>
+      </section>
+
+
+
+
+
+
+      {/* ENHANCED GALLERY SECTION */}
+      <section id="gallery" className="relative py-20 bg-gradient-to-br from-yellow-100 to-yellow-200">
+        <div className="max-w-7xl mx-auto px-4">
+
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-red-900/10 rounded-full border border-red-900/20 mb-4">
+              <span className="text-red-900 font-medium text-sm">Our Craftsmanship</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-red-900 mb-4">
+              Factory & Product Gallery
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Discover the artistry behind our manufacturing process and the beauty of our finished products
+            </p>
+          </div>
+
+
           {/* Gallery Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
-              <div 
-                key={item} 
-                className={`group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 ${
-                  index % 3 === 0 ? 'md:col-span-2' : ''
-                } ${index === 0 ? 'lg:row-span-2' : ''}`}
+            {[1, 2, 3, 4, 5, 6, 7].map((item, index) => (
+              <div
+                key={item}
+                className={`group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 ${index % 3 === 0 ? 'md:col-span-2' : ''
+                  } ${index === 0 ? 'lg:row-span-2' : ''}`}
               >
                 <div className={`relative ${index === 0 ? 'aspect-square' : 'aspect-[4/3]'} bg-red-900 p-1`}>
                   <div className="relative w-full h-full rounded-xl overflow-hidden">
                     <Image
-                      src={`/gallery${item}.jpg`}
+                      src={`/gallery${item}.jpeg`}
                       alt={`Gallery ${item}`}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                       sizes="(max-width: 768px) 50vw, 25vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    
+
                     {/* Hover overlay */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                       <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
@@ -266,7 +419,7 @@ export default function Home() {
       {/* ENHANCED PRODUCTS SECTION */}
       <section id="products" className="relative py-20 bg-gradient-to-br from-yellow-50 to-yellow-100">
         <div className="max-w-7xl mx-auto px-4">
-          
+
           {/* Section Header */}
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-red-900/10 rounded-full border border-red-900/20 mb-4">
@@ -284,7 +437,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3].map((item) => (
               <div key={item} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
-                
+
                 {/* Image Container */}
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <Image
@@ -294,7 +447,7 @@ export default function Home() {
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-                  
+
                   {/* Floating badge */}
                   <div className="absolute top-4 left-4 bg-red-900 text-white px-3 py-1 rounded-full text-sm font-medium">
                     Premium
@@ -313,18 +466,18 @@ export default function Home() {
                       ))}
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-600 leading-relaxed">
                     Exquisite craftsmanship meets luxurious fabric in this stunning piece. Perfect for festive occasions and formal events.
                   </p>
-                  
+
                   {/* Features */}
                   <div className="flex flex-wrap gap-2">
                     <span className="px-3 py-1 bg-yellow-100 text-red-900 text-xs rounded-full font-medium">Handwoven</span>
                     <span className="px-3 py-1 bg-yellow-100 text-red-900 text-xs rounded-full font-medium">Premium Silk</span>
                     <span className="px-3 py-1 bg-yellow-100 text-red-900 text-xs rounded-full font-medium">Custom Design</span>
                   </div>
-                  
+
                   <div className="pt-4 border-t border-gray-100">
                     <a
                       href="#enquiry"
