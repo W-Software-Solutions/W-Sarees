@@ -36,9 +36,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-yellow-50 via-yellow-100 to-yellow-200">
 
-      {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23800020' fillOpacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
@@ -48,7 +46,6 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-6">
                 <div className="inline-block px-4 py-2 bg-red-900/10 rounded-full border border-red-900/20">
@@ -89,7 +86,7 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Stats */}
+              
               <div className="flex flex-wrap gap-8 pt-8 border-t border-red-900/20">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-red-900">25+</div>
@@ -106,11 +103,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Content - Images & Video */}
             <div className="relative">
               <div className="grid grid-cols-2 gap-6 h-full">
 
-                {/* Video Section */}
                 <div className="space-y-6">
                   <div className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl bg-red-900 p-1">
                     <div className="relative w-full h-full rounded-xl overflow-hidden">
@@ -125,14 +120,12 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Small feature card */}
                   <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-white/50">
                     <div className="text-red-900 font-bold text-lg">Premium Quality</div>
                     <div className="text-gray-600 text-sm">Handcrafted Excellence</div>
                   </div>
                 </div>
 
-                {/* Image Slider Section */}
                 <div className="space-y-6">
                   <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                     <div
@@ -174,9 +167,7 @@ export default function Home() {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                       </button>
-                      {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-                      {/* Navigation dots */}
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
                         {heroImages.slice(0, 5).map((_, idx) => (
                           <button
@@ -193,7 +184,6 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Small feature card */}
                   <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-white/50">
                     <div className="text-red-900 font-bold text-lg">Custom Design</div>
                     <div className="text-gray-600 text-sm">Tailored Solutions</div>
@@ -201,7 +191,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Floating elements */}
               <div className="absolute -top-8 -right-8 w-24 h-24 bg-red-900/20 rounded-full blur-xl"></div>
               <div className="absolute -bottom-12 -left-8 w-32 h-32 bg-yellow-100/30 rounded-full blur-xl"></div>
             </div>
@@ -212,11 +201,9 @@ export default function Home() {
 
 
 
-      {/* PROFESSIONAL GALLERY SECTION */}
       <section id="gallery" className="relative py-20 bg-gradient-to-br from-yellow-100 to-yellow-200">
         <div className="max-w-7xl mx-auto px-4">
 
-          {/* Section Header */}
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-red-900/10 rounded-full border border-red-900/20 mb-4">
               <span className="text-red-900 font-medium text-sm">Our Craftsmanship</span>
@@ -229,10 +216,8 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Simple, Clean Gallery Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 
-            {/* Main Featured Image */}
             <div className="col-span-2 row-span-2 group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="relative aspect-square bg-red-900 p-1 rounded-2xl">
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
@@ -254,7 +239,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Gallery Item 2 */}
             <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="relative aspect-square bg-red-900 p-1 rounded-2xl">
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
@@ -276,7 +260,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Gallery Item 3 */}
             <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="relative aspect-square bg-red-900 p-1 rounded-2xl">
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
@@ -298,7 +281,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Gallery Item 4 */}
             <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="relative aspect-square bg-red-900 p-1 rounded-2xl">
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
@@ -320,7 +302,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Gallery Item 5 */}
             <div className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="relative aspect-square bg-red-900 p-1 rounded-2xl">
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
@@ -363,11 +344,9 @@ export default function Home() {
 
 
 
-      {/* ENHANCED GALLERY SECTION */}
       <section id="gallery" className="relative py-20 bg-gradient-to-br from-yellow-100 to-yellow-200">
         <div className="max-w-7xl mx-auto px-4">
 
-          {/* Section Header */}
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-red-900/10 rounded-full border border-red-900/20 mb-4">
               <span className="text-red-900 font-medium text-sm">Our Craftsmanship</span>
@@ -381,7 +360,6 @@ export default function Home() {
           </div>
 
 
-          {/* Gallery Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {[1, 2, 3, 4, 5, 6, 7].map((item, index) => (
               <div
@@ -400,7 +378,6 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                    {/* Hover overlay */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                       <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
                         <svg className="w-6 h-6 text-red-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -416,11 +393,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ENHANCED PRODUCTS SECTION */}
       <section id="products" className="relative py-20 bg-gradient-to-br from-yellow-50 to-yellow-100">
         <div className="max-w-7xl mx-auto px-4">
 
-          {/* Section Header */}
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-red-900/10 rounded-full border border-red-900/20 mb-4">
               <span className="text-red-900 font-medium text-sm">Premium Collection</span>
@@ -433,12 +408,10 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3].map((item) => (
               <div key={item} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
 
-                {/* Image Container */}
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <Image
                     src={`/saree${item}.jpg`}
@@ -448,13 +421,11 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
 
-                  {/* Floating badge */}
                   <div className="absolute top-4 left-4 bg-red-900 text-white px-3 py-1 rounded-full text-sm font-medium">
                     Premium
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="p-8 space-y-4">
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-bold text-red-900">Saree Design {item}</h3>
@@ -471,7 +442,6 @@ export default function Home() {
                     Exquisite craftsmanship meets luxurious fabric in this stunning piece. Perfect for festive occasions and formal events.
                   </p>
 
-                  {/* Features */}
                   <div className="flex flex-wrap gap-2">
                     <span className="px-3 py-1 bg-yellow-100 text-red-900 text-xs rounded-full font-medium">Handwoven</span>
                     <span className="px-3 py-1 bg-yellow-100 text-red-900 text-xs rounded-full font-medium">Premium Silk</span>

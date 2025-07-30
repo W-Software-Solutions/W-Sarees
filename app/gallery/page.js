@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Image from "next/image";
 
-// Use your local images (make sure these files exist in the public folder)
 const images = [
   "/gallery1.jpeg",
   "/gallery2.jpeg",
@@ -45,7 +44,6 @@ export default function GalleryPage() {
           </p>
         </div>
 
-        {/* Masonry-like Responsive Gallery */}
         <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
           {images.map((src, idx) => (
             <div
@@ -53,9 +51,7 @@ export default function GalleryPage() {
               className="break-inside-avoid rounded-2xl overflow-hidden shadow-lg bg-white/80 border border-white/60 group transition-all duration-300 hover:shadow-2xl hover:border-red-900/60 hover:bg-white/95 hover:-translate-y-2 cursor-pointer relative"
               onClick={() => handleImageClick(src)}
             >
-              {/* Animated border highlight */}
               <div className="absolute inset-0 z-10 pointer-events-none rounded-2xl border-2 border-transparent group-hover:border-red-900 group-hover:shadow-[0_0_32px_0_rgba(120,0,32,0.25)] transition-all duration-300"></div>
-              {/* Subtle colored glow */}
               <div className="absolute inset-0 z-0 pointer-events-none rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur-lg" style={{boxShadow: "0 0 40px 10px rgba(120,0,32,0.10)"}}></div>
               <div className="relative w-full z-20">
                 <Image
@@ -67,7 +63,6 @@ export default function GalleryPage() {
                   style={{ display: "block" }}
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
-                {/* Overlay with gradient and icon */}
                 <div className="absolute inset-0 bg-gradient-to-t from-red-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 pointer-events-none"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none">
                   <div className="bg-white/90 backdrop-blur-md rounded-full p-4 shadow-xl border border-red-900/20 animate-fade-in scale-90 group-hover:scale-110 transition-transform duration-300">
@@ -76,14 +71,12 @@ export default function GalleryPage() {
                     </svg>
                   </div>
                 </div>
-                {/* Futuristic border glow */}
                 <div className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition duration-500 border-4 border-red-800/20 shadow-[0_0_40px_10px_rgba(120,0,32,0.15)]"></div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Modal for full-size image */}
         {modal.open && (
           <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm transition-all"
@@ -114,7 +107,6 @@ export default function GalleryPage() {
           </div>
         )}
 
-        {/* Call to Action */}
         <div className="flex justify-center mt-16">
           <a
             href="/"
