@@ -50,23 +50,27 @@ export default function GalleryPage() {
           {images.map((src, idx) => (
             <div
               key={src + idx}
-              className="break-inside-avoid rounded-2xl overflow-hidden shadow-lg bg-white/80 border border-white/60 group transition-all duration-300 hover:shadow-2xl hover:border-red-900/40 hover:bg-white/90 hover:-translate-y-2 cursor-pointer"
+              className="break-inside-avoid rounded-2xl overflow-hidden shadow-lg bg-white/80 border border-white/60 group transition-all duration-300 hover:shadow-2xl hover:border-red-900/60 hover:bg-white/95 hover:-translate-y-2 cursor-pointer relative"
               onClick={() => handleImageClick(src)}
             >
-              <div className="relative w-full">
+              {/* Animated border highlight */}
+              <div className="absolute inset-0 z-10 pointer-events-none rounded-2xl border-2 border-transparent group-hover:border-red-900 group-hover:shadow-[0_0_32px_0_rgba(120,0,32,0.25)] transition-all duration-300"></div>
+              {/* Subtle colored glow */}
+              <div className="absolute inset-0 z-0 pointer-events-none rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur-lg" style={{boxShadow: "0 0 40px 10px rgba(120,0,32,0.10)"}}></div>
+              <div className="relative w-full z-20">
                 <Image
                   src={src}
                   alt={`Gallery ${idx + 1}`}
                   width={600}
                   height={400}
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110 group-hover:blur-[1.5px]"
+                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 group-hover:blur-[1.5px] group-hover:brightness-90"
                   style={{ display: "block" }}
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
                 {/* Overlay with gradient and icon */}
                 <div className="absolute inset-0 bg-gradient-to-t from-red-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 pointer-events-none"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none">
-                  <div className="bg-white/90 backdrop-blur-md rounded-full p-4 shadow-xl border border-red-900/20 animate-fade-in">
+                  <div className="bg-white/90 backdrop-blur-md rounded-full p-4 shadow-xl border border-red-900/20 animate-fade-in scale-90 group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-8 h-8 text-red-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
@@ -120,9 +124,10 @@ export default function GalleryPage() {
             <svg className="ml-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-          </a>
-        </div>
-      </section>
+          </a>  
+        </div>       
+
+    </section>
     </main>
   );
 }
