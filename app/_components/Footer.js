@@ -20,9 +20,9 @@ const Footer = () => {
 
         <div>
           <h3 className="font-semibold mb-2">Contact</h3>
-          <p className="text-sm">Email: <a href="mailto:info@wsarees.com" className="underline">info@wsarees.com</a></p>
-          <p className="text-sm">Phone: <a href="tel:+919876543210" className="underline">+91 98765 43210</a></p>
-          <p className="text-sm">WhatsApp: <a href="https://wa.me/919876543210" target="_blank" rel="noopener" className="underline">Chat Now</a></p>
+          <p className="text-sm">Email: <Link href="mailto:info@wsarees.com" className="underline">info@wsarees.com</Link></p>
+          <p className="text-sm">Phone: <Link href="tel:+919876543210" className="underline">+91 98765 43210</Link></p>
+          <p className="text-sm">WhatsApp: <Link href="https://wa.me/919876543210" target="_blank" rel="noopener" className="underline">Chat Now</Link></p>
         </div>
         
         <div>
@@ -46,10 +46,10 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-2">Connect & Markets</h3>
           <div className="flex space-x-4 mb-2">
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener" aria-label="WhatsApp" className="hover:text-green-600"><FaWhatsapp size={20} /></a>
-            <a href="#" target="_blank" rel="noopener" aria-label="Instagram" className="hover:text-pink-600"><FaInstagram size={20} /></a>
-            <a href="#" target="_blank" rel="noopener" aria-label="Facebook" className="hover:text-blue-600"><FaFacebookF size={20} /></a>
-            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn" className="hover:text-blue-800"><FaLinkedinIn size={20} /></a>
+            <Link href="https://wa.me/919876543210" target="_blank" rel="noopener" aria-label="WhatsApp" className="hover:text-green-600"><FaWhatsapp size={20} /></Link>
+            <Link href="#" target="_blank" rel="noopener" aria-label="Instagram" className="hover:text-pink-600"><FaInstagram size={20} /></Link>
+            <Link href="#" target="_blank" rel="noopener" aria-label="Facebook" className="hover:text-blue-600"><FaFacebookF size={20} /></Link>
+            <Link href="#" target="_blank" rel="noopener" aria-label="LinkedIn" className="hover:text-blue-800"><FaLinkedinIn size={20} /></Link>
           </div>
           <p className="text-xs">Supplying to: All over India</p>
         </div>

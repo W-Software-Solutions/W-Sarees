@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from 'next/link';
 
 const images = [
   "/gallery1.jpeg",
@@ -108,7 +109,7 @@ export default function GalleryPage() {
         )}
 
         <div className="flex justify-center mt-16">
-          <a
+          <Link
             href="/"
             className="inline-flex items-center px-10 py-4 bg-red-900 hover:bg-red-800 text-white rounded-full font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg tracking-wide"
           >
@@ -116,7 +117,7 @@ export default function GalleryPage() {
             <svg className="ml-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-          </a>  
+          </Link> 
         </div>       
 
     </section>
